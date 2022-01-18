@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+
+    <title>Fedora Rose</title>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Fedora Rose</h1>
+        <div>
+            <li><a href="index.html#welcome-section">Home</a></li>
+            <li><a href="index.html#about-section">About</a></li>
+            <li><a href="index.html#skill-section">Skills</a></li>
+            <li><a href="index.html#footer">Contact me</a></li>
+            <img src="assets/sun.svg" width="25px">
+            <img src="assets/music.svg" width="25px" style="margin-left: 20px;">
+        </div>
+        
+    </div>
+<div class="music-section">
+    <div class="music-wrapper">
+        <h1>Currently Playing: <span id="current_song">-</span></h1>
+        <ul>
+            <li onclick="play_music('river_flows_in_you')">
+                <p>River flows in you</p>
+                <img src="assets/play.svg" style="margin-right: 50px;">
+            </li>
+                <li onclick="play_music('unravel')">
+                <p>Unravel</p>
+                <img src="assets/play.svg" style="margin-right: 50px;">
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <div class="footer" id="footer" style="bottom: 0px;">
+        <p>Copyright © Fedora Rose all rights reserved</p>
+    </div>
+    <script src="music.js"></script>
+</body>
+</html>
