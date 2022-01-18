@@ -59,6 +59,9 @@ html {
     font-family: 'Poppins', sans-serif;
     opacity: 60%;
 }
+.welcome-section p {
+    width: 350px;
+}
 
 
 .welcome-section .content p {
@@ -127,6 +130,11 @@ button:hover {
     display: flex;
     justify-content: space-between;
     width: 400px;
+}
+.about .content .right .count .card {
+    display: grid;
+    justify-items: center;
+    width: 200px;
 }
 .about .content .right .count .card h1 {
     font-size: 30px;
@@ -203,6 +211,10 @@ button:hover {
     .navbar div {
         display: none;
     }
+    .navbar .menu {
+        display: block !important;
+        margin-right: 40px;
+    }
 }
 
 @media screen and (max-width: 740px) {
@@ -214,7 +226,7 @@ button:hover {
     .about .content {
         width: 100%;
         display: grid;
-        justify-content: space-evenly;
+        justify-items: center !important;
     }
     .about .button-wrapper {
         display: flex;
@@ -222,7 +234,27 @@ button:hover {
     }
     .about .right p {
         text-align: center;
+        margin: auto;
+        font-size: 17px;
     }
+}
+@media screen and (max-width: 410px) {
+    .about .content .pf {
+        width: 300px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .welcome-section h1 {
+    font-size: 50px !important;
+    }
+    .welcome-section button {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 324px) {
+    .welcome-section h1 {
+        font-size: 45px !important;
+        }
 }
 
 .footer {
@@ -286,4 +318,83 @@ a {
 }
 #current_song {
     color: #504aff;
+}
+
+
+.showed-navbar {
+    position: absolute;
+    z-index: 200;
+    background: #fcfbff;
+    width: 100%;
+    height: 100vh;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    animation: navbar-show 0.5s;
+    left: 0;
+}
+.showed-navbar ul {
+    list-style-type: none;
+    font-family: 'Poppins';
+}
+.showed-navbar ul li {
+    margin: 20px;
+    animation-delay: 2s;
+    animation: navbar-items-toggle 1s;
+
+    
+}
+.showed-navbar ul li a {
+    font-size: 25px;
+}
+
+@keyframes navbar-show {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+@keyframes navbar-hide {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: -100%;
+    }
+}
+@keyframes navbar-items-toggle {
+    0% {
+        opacity: 0;
+    }
+}
+.hidden-navbar {
+    position: absolute;
+    z-index: 200;
+    background: #fcfbff;
+    width: 100%;
+    height: 100vh;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: -100%;
+    animation: navbar-hide 0.5s;
+}
+
+.hidden-navbar  ul {
+    list-style-type: none;
+    font-family: 'Poppins';
+}
+.hidden-navbar  ul li {
+    margin: 20px;
+    animation-delay: 2s;
+    animation: navbar-items-toggle 1s;
+
+    
+}
+.hidden-navbar  ul li a {
+    font-size: 25px;
 }

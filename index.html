@@ -9,6 +9,17 @@
     <title>Fedora Rose</title>
 </head>
 <body>
+    <div id="hidden_nav" class="hidden-navbar">
+        <ul>
+            <li><a onclick="hide_nav()"href="#welcome-section">Home</a></li>
+            <li><a onclick="hide_nav()"href="#about-section">About</a></li>
+            <li><a onclick="hide_nav()"href="#skill-section">Skills</a></li>
+            <li><a onclick="hide_nav()"href="#footer">Contact me</a></li>
+            <li><a onclick="hide_nav()"href="music.html">Music</a></li>
+            <li onclick="hide_nav()"><a href="#">Back</a></li>
+        </ul>
+    </div>
+
     <div class="navbar">
         <h1>Fedora Rose</h1>
         <div>
@@ -16,9 +27,9 @@
             <li><a href="#about-section">About</a></li>
             <li><a href="#skill-section">Skills</a></li>
             <li><a href="#footer">Contact me</a></li>
-            <img src="assets/sun.svg" width="25px">
             <img src="assets/music.svg" width="25px" style="margin-left: 20px; cursor: pointer;" onclick="window.location.href = './music.html'">
         </div>
+        <img src="assets/menu.svg" class="menu" style="display: none;" onclick="show_nav()">
         
     </div>
 
@@ -28,7 +39,7 @@
             <h1>Hi, I'm Rose</h1>
             <h2>Frontend developer</h2>
             
-            <p>High level experience in web design and <br>web development knowledge</p>
+            <p>High level experience in web design and web development knowledge</p>
             <button>Contact Me</button>
         </div>
     </div>
@@ -135,5 +146,21 @@
     <div class="footer" id="footer">
         <p>Copyright © Fedora Rose all rights reserved</p>
     </div>
+
+    <script>
+        let toggled_nav = document.getElementById('hidden_nav');
+
+        const show_nav = () => {
+            toggled_nav.classList.remove('hidden-navbar');
+            toggled_nav.classList.add('showed-navbar');
+        }
+        
+        const hide_nav = () => {
+            toggled_nav.classList.remove('showed-navbar');
+            toggled_nav.classList.add('hidden-navbar')
+        }
+        
+        
+    </script>
 </body>
 </html>

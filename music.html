@@ -10,6 +10,17 @@
     <title>Fedora Rose</title>
 </head>
 <body>
+
+    <div id="hidden_nav" class="hidden-navbar">
+        <ul>
+            <li><a onclick="hide_nav()"href="index.html#welcome-section">Home</a></li>
+            <li><a onclick="hide_nav()"href="index.html#about-section">About</a></li>
+            <li><a onclick="hide_nav()"href="index.html#skill-section">Skills</a></li>
+            <li><a onclick="hide_nav()"href="index.html#footer">Contact me</a></li>
+            <li><a onclick="hide_nav()"href="music.html">Music</a></li>
+            <li onclick="hide_nav()"><a href="#">Back</a></li>
+        </ul>
+    </div>
     <div class="navbar">
         <h1>Fedora Rose</h1>
         <div>
@@ -17,10 +28,9 @@
             <li><a href="index.html#about-section">About</a></li>
             <li><a href="index.html#skill-section">Skills</a></li>
             <li><a href="index.html#footer">Contact me</a></li>
-            <img src="assets/sun.svg" width="25px">
             <img src="assets/music.svg" width="25px" style="margin-left: 20px;">
         </div>
-        
+        <img src="assets/menu.svg" class="menu" style="display: none;" onclick="show_nav()">
     </div>
 <div class="music-section">
     <div class="music-wrapper">
@@ -39,8 +49,23 @@
 </div>
 
     <div class="footer" id="footer" style="bottom: 0px;">
-        <p>Copyright © Fedora Rose The Music on this page are all covers, im not the Composer or Owner</p>
+        <p>Copyright © Fedora Rose The Music on this page are all covers from me im not the Composer</p>
     </div>
     <script src="music.js"></script>
+    <script>
+        let toggled_nav = document.getElementById('hidden_nav');
+
+        const show_nav = () => {
+            toggled_nav.classList.remove('hidden-navbar');
+            toggled_nav.classList.add('showed-navbar');
+        }
+        
+        const hide_nav = () => {
+            toggled_nav.classList.remove('showed-navbar');
+            toggled_nav.classList.add('hidden-navbar')
+        }
+        
+        
+    </script>
 </body>
 </html>
